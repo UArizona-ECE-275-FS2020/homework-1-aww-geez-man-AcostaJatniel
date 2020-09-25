@@ -43,7 +43,7 @@ void C137::Morty(int start, int stop, int step)
 
 void C137::Morty(int start, int stop)
 {
-    for (int i = start; i <= stop; i = i++)
+    for (int i = start; i <= stop; i++)
     {
         if (i % 15 == 0)
         {
@@ -98,7 +98,7 @@ void Z286::Morty(int start, int stop, int step)
 
 void Z286::Morty(int start, int stop)
 {
-    for (int i = start; i <= stop; i = i++)
+    for (int i = start; i <= stop; i++)
     {
         if (i % 15 == 0)
         {

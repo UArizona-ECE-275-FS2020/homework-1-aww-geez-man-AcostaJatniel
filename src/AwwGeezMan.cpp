@@ -36,31 +36,36 @@ int main(int ac, char** av) {
 
 		return -1;
 	}
-	switch (ac)
+	else
 	{
-	case 4:
-		start = atoi(av[1]);
-		stop = atoi(av[2]);
-		step = 1;
-		dimension = atoi(av[3]);
-
-	case 5:
-		start = atoi(av[1]);
-		stop = atoi(av[2]);
-		step = atoi(av[3]);
-		dimension = atoi(av[4]);
-
-	}
-
-		if(dimension == "C137")
+		if (ac == 4)
 		{
-			C137::Morty(start, stop, step);
-			std::cout << "Morty C137 says:" << std::endl;
+			start = atoi(av[1]);
+			stop = atoi(av[2]);
+			step = 1;
+			dimension = (std::string)(av[3]);
 		}
 
-		else if (dimension == "Z286") {
-			Z286::Morty(start, stop, step);
+		else if (ac == 5)
+		{
+			start = atoi(av[1]);
+			stop = atoi(av[2]);
+			step = atoi(av[3]);
+			dimension = (std::string)(av[4]);
+
+		}
+
+
+		if (dimension == "C137")
+		{
+			std::cout << "Morty C137 says:" << std::endl;
+			C137::Morty(start, stop, step);
+		}
+
+		else if (dimension == "Z286") 
+		{
 			std::cout << "Morty Z286 says:" << std::endl;
+			Z286::Morty(start, stop, step);
 		}
 		else
 		{
@@ -68,7 +73,6 @@ int main(int ac, char** av) {
 
 			return -1;
 		}
-
-
+	}
 	return 0;
 }
