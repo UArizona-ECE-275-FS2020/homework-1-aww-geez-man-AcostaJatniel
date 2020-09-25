@@ -69,7 +69,7 @@ int main(int ac, char** av) {
 		}
 		else
 		{
-			std::cout << "ERROR: Unkwown Dimension!!" << std::endl;
+			std::cout << "ERROR: Unknown dimension!!" << std::endl;
 
 			return -1;
 		}
